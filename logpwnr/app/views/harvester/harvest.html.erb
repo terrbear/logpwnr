@@ -1,0 +1,12 @@
+<p>
+	<h1>Harvesting...</h1> 
+	<h2>App: <%= @app.name %></h2>
+	<h2>Locations:</h2>
+	<ul>
+		<% @app.locations.each do |loc| %>
+		<li><%= loc.user %>@<%= loc.ip %>:<%= loc.directory %></li>
+		<% end %>
+	</ul>
+	<h2>Download the CSV</h2>
+	<div><a href="/public/files/<%= @app.csv_file %>"><%= @app.csv_file %></a></div>
+</p>

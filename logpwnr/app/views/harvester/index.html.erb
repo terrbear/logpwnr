@@ -1,0 +1,3 @@
+<% @apps.each do |app| %>
+	<p><b><%= app.name %></b> (last harvested <%= app.last_harvested.nil? ? "never" : "on #{app.last_harvested}"%>; <a href="/harvester/harvest/<%= app.id %>">harvest now</a>) <br/><%= app.summary %></p>
+<% end %>
